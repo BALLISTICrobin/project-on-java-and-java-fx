@@ -1,0 +1,52 @@
+/* Apply base styles to all buttons */
+.button {
+    -fx-font-size: 16px;
+    -fx-text-fill: #fff;
+    -fx-padding: 10px 20px;
+    -fx-background-radius: 5px;
+    -fx-cursor: pointer;
+    -fx-border-width: 1px;
+    -fx-border-radius: 5px;
+    -fx-background-color: #3498db; /* Default button background color */
+    -fx-border-color: #2980b9; /* Default button border color */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 3, 0, 0, 1);
+    -fx-transition: all 0.3s;
+}
+
+/* Define a style for the hover state */
+.button:hover {
+    -fx-background-color: #2980b9; /* Hovered button background color */
+    -fx-border-color: #3498db; /* Hovered button border color */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 5, 0, 0, 1);
+}
+
+/* Define a style for the pressed state */
+.button:pressed {
+    -fx-background-color: #2980b9; /* Pressed button background color */
+    -fx-border-color: #3498db; /* Pressed button border color */
+    -fx-effect: innershadow(gaussian, rgba(0, 0, 0, 0.5), 2, 0, 0, 1);
+}
+
+/* Define a style for disabled buttons */
+.button:disabled {
+    -fx-opacity: 0.5; /* Reduce opacity for disabled buttons */
+    -fx-cursor: default;
+}
+
+/* Customize individual buttons by their IDs */
+#primaryButton {
+    -fx-background-color: #3498db; /* Primary button background color */
+    -fx-border-color: #2980b9; /* Primary button border color */
+}
+
+#secondaryButton {
+    -fx-background-color: #27ae60; /* Secondary button background color */
+    -fx-border-color: #2ecc71; /* Secondary button border color */
+}
+
+/* Add more custom button styles as needed */
+
+/* Example usage in FXML:
+<Button fx:id="primaryButton" text="Primary Button" />
+<Button fx:id="secondaryButton" text="Secondary Button" />
+*/

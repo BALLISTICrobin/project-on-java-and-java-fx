@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.restaurantfx.managerLoginController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="800.0">
+         <children>
+            <ImageView fitHeight="800.0" fitWidth="800.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@chefRstaurantMan.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="submit" layoutX="502.0" layoutY="512.0" mnemonicParsing="false" onAction="#showRestaurantDetails" onKeyPressed="#showRestaurantDetail" prefHeight="35.0" prefWidth="94.0" stylesheets="@button.css" text="Submit" />
+            <Button fx:id="Reset" layoutX="266.0" layoutY="515.0" mnemonicParsing="false" onAction="#resetText" prefHeight="35.0" prefWidth="93.0" stylesheets="@button.css" text="Reset" />
+            <Text layoutX="240.0" layoutY="292.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login">
+               <font>
+                  <Font name="Times New Roman Bold" size="31.0" />
+               </font>
+               <fill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.03313840180635452" green="0.10935672372579575" blue="0.22368420660495758" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.16885964572429657" green="0.4328947365283966" blue="0.8289473652839661" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Text>
+            <Text fill="#bf3434" layoutX="240.0" layoutY="426.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Restaurant Id" wrappingWidth="131.2998046875">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Text>
+            <Text fill="#e40e0e" layoutX="228.0" layoutY="354.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Restaurant Name">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Text>
+            <TextField fx:id="restaurantName" layoutX="403.0" layoutY="334.0" />
+            <TextField fx:id="restaurantId" layoutX="404.0" layoutY="405.0" />
+            <ImageView fitHeight="150.0" fitWidth="400.0" layoutX="204.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@appsLogo.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</GridPane>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.restaurantfx.showRestaurantDetailsFromManagerViewController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="800.0">
+         <children>
+            <ImageView fitHeight="930.0" fitWidth="1199.0" opacity="0.33" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@chefs.jpg" />
+               </image>
+            </ImageView>
+            <Button fx:id="back" layoutX="26.0" layoutY="27.0" mnemonicParsing="false" onAction="#GoingBack" stylesheets="@button.css" text="Back">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@previous.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button fx:id="logOut" layoutX="659.0" layoutY="17.0" mnemonicParsing="false" onAction="#loggingOut" stylesheets="@button.css" text="LogOut">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@logOut.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Text layoutX="44.0" layoutY="116.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Restaurant Details">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Text>
+            <TableView fx:id="restaurantTableView" layoutX="2.0" layoutY="132.0" prefHeight="100.0" prefWidth="798.0" stylesheets="@tableView.css">
+              <columns>
+                <TableColumn fx:id="idCol" prefWidth="50.08015203475952" text="Id" />
+                <TableColumn fx:id="nameCol" prefWidth="129.3865089416504" text="Name" />
+                  <TableColumn fx:id="scoreCol" prefWidth="93.113525390625" text="Score" />
+                  <TableColumn fx:id="priceCol" prefWidth="101.7657470703125" text="Price Range" />
+                  <TableColumn fx:id="zipCol" prefWidth="87.54409790039062" text="Zip Code" />
+                  <TableColumn fx:id="catCol" prefWidth="333.5" text="Category" />
+              </columns>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </TableView>
+            <TableView fx:id="FoodListTable" layoutY="292.0" prefHeight="178.0" prefWidth="800.0">
+              <columns>
+                <TableColumn fx:id="FIDCol" prefWidth="95.88190448284149" text="Restaurant Id" />
+                <TableColumn fx:id="FNCol" prefWidth="286.84242248535156" text="Food Name" />
+                  <TableColumn fx:id="FCCol" prefWidth="287.1575622558594" text="Food Category" />
+                  <TableColumn fx:id="FPCol" prefWidth="130.44125366210938" text="Food p[rice" />
+                  <TableColumn prefWidth="75.0" text="Column X" />
+              </columns>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </TableView>
+            <Button fx:id="orderList" layoutX="14.0" layoutY="494.0" mnemonicParsing="false" onAction="#showOrder" text="View Order List">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@order.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button fx:id="showFoods" layoutX="2.0" layoutY="245.0" mnemonicParsing="false" onAction="#showingAllFoods" prefHeight="33.0" prefWidth="191.0" text="Search Foods">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@search.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <TableView fx:id="OrderTableView" layoutX="1.0" layoutY="540.0" prefHeight="219.0" prefWidth="791.0">
+              <columns>
+                  <TableColumn fx:id="idRestaurantCol" prefWidth="95.0" text="Restaurant Id" />
+                <TableColumn fx:id="foodName" minWidth="0.0" prefWidth="150.0" text="Food Name" />
+                  <TableColumn fx:id="foodPrice" prefWidth="111.0" text="Food Price" />
+                  <TableColumn fx:id="quantity" prefWidth="114.0" text="Quantity" />
+                  <TableColumn fx:id="totalFoodPrice" prefWidth="115.0" text="Total Food Price" />
+                  <TableColumn fx:id="Accepted" prefWidth="96.0" text="Accept" />
+                  <TableColumn fx:id="customerName" prefWidth="109.0" text="Customer Name" />
+              </columns>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </TableView>
+         </children>
+      </AnchorPane>
+   </children>
+</GridPane>

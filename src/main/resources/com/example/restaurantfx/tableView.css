@@ -1,0 +1,58 @@
+/* Style the TableView */
+#tableView {
+    -fx-font-size: 14px;
+}
+
+/* Style the TableView headers */
+#tableView .column-header {
+    -fx-background-color: #3498db; /* Header background color */
+    -fx-text-fill: #fff; /* Header text color */
+    -fx-font-weight: bold;
+}
+
+/* Style the TableView rows */
+#tableView .table-row-cell {
+    -fx-background-color: #f2f2f2; /* Row background color */
+    -fx-text-fill: #333; /* Row text color */
+    -fx-border-color: transparent transparent #dcdcdc transparent; /* Row border color */
+}
+
+/* Style the TableView cells */
+#tableView .table-cell {
+    -fx-alignment: center-left; /* Cell content alignment */
+}
+
+/* Style the alternating row colors */
+#tableView .table-row-cell:odd {
+    -fx-background-color: #e6e6e6; /* Alternate row background color */
+}
+
+/* Style the selected row */
+#tableView .table-row-cell:selected {
+    -fx-background-color: #3498db; /* Selected row background color */
+    -fx-text-fill: #fff; /* Selected row text color */
+}
+
+/* Style the hover effect on rows */
+#tableView .table-row-cell:hover {
+    -fx-background-color: #dcdcdc; /* Hovered row background color */
+}
+
+/* Style the column resize cursor */
+.table-view .column-header .resize-handle {
+    -fx-background-color: transparent;
+    -fx-background-radius: 0;
+    -fx-padding: 0;
+    -fx-cursor: split-east-west;
+}
+
+/* Customize your specific table columns */
+/* Example usage in FXML:
+<TableView fx:id="tableView">
+    <columns>
+        <TableColumn text="Column 1" />
+        <TableColumn text="Column 2" />
+        <!-- Add more columns as needed -->
+    </columns>
+</TableView>
+*/
